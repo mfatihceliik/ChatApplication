@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ChatApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    
+    <style name="progressBar" parent="">
+        <item name="colorAccent">#D6D6D6</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="searchView" parent="">
+        <item name="android:editTextColor">@color/white_100</item>
+        <item name="android:textColorHint">@color/white_100</item>
+    </style>
+
+    <dimen name="speech_bubble_corners">10dp</dimen>
+    <dimen name="speech_bubble_corners_plus_tail">15dp</dimen>
+    <dimen name="speech_bubble_spacing">5dp</dimen>
+    <dimen name="speech_bubble_tail">25dp</dimen>
+
+    <style name="Theme.AppCompat.DialogFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <dimen name="gallery_grid_item_height">120dp</dimen>
+
+</resources>

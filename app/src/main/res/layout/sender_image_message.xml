@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/message_item_space_8dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/speech_bubble_outgoing"
+        android:padding="@dimen/message_item_space_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageContentImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="320dp"
+            android:maxHeight="350dp"
+            android:minWidth="250dp"
+            android:minHeight="250dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/car"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="start"
+            android:maxWidth="250dp"
+            android:padding="4dp"
+            android:textColor="@color/white_100"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageContentImageView"
+            tools:text="Image content text message !" />
+
+        <TextView
+            android:id="@+id/sendTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/text_message_time_11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageContentImageView"
+            app:layout_constraintEnd_toStartOf="@+id/doubleTick"
+            tools:text="18:06" />
+
+        <ImageView
+            android:id="@+id/doubleTick"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/double_tick"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imageContentImageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageContentImageView" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:theme="@style/progressBar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imageContentImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageContentImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

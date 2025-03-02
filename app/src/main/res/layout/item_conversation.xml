@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conversationCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_400"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:strokeColor="@color/black_400"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/conversationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/white_100"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="conversation title" />
+
+        <TextView
+            android:id="@+id/lastMessageSenderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:maxLength="30"
+            android:maxLines="2"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toBottomOf="@+id/conversationTitle"
+            tools:text="userName: " />
+
+        <TextView
+            android:id="@+id/lastMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:maxLength="30"
+            android:maxLines="2"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toEndOf="@+id/lastMessageSenderTextView"
+            app:layout_constraintTop_toBottomOf="@+id/conversationTitle"
+            tools:text="Hi, how are you doing ?" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/grey"
+            android:maxLength="20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="now" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

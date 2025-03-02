@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45203847908",
+    "project_id": "chatapplication-c107c",
+    "storage_bucket": "chatapplication-c107c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45203847908:android:f1aedfea75b867a9f18af1",
+        "android_client_info": {
+          "package_name": "com.mfatihceliik.chatapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKSKgJMJuM2B1uF6R_ZBl5izvT3X3AI2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

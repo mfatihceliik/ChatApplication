@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:padding="@dimen/message_item_space_8dp"
+    android:layout_margin="@dimen/message_item_space_4dp"
+    android:background="@drawable/speech_bubble_incoming"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageContentImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="320dp"
+        android:minWidth="250dp"
+        android:minHeight="250dp"
+        android:maxHeight="350dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:src="@drawable/car"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="start"
+        android:maxWidth="250dp"
+        android:padding="4dp"
+        android:textColor="@color/white_100"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/sendTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageContentImageView"
+        tools:text="Image content text message !" />
+
+    <TextView
+        android:id="@+id/sendTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/text_message_time_11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="18:06" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

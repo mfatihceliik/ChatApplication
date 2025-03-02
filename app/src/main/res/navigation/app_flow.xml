@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/app_flow"
+    app:startDestination="@id/homeFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mfatihceliik.chatapplication.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mfatihceliik.chatapplication.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_createNewChatBottomSheetDialog"
+            app:destination="@id/createNewChatBottomSheetDialog"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/from_top"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.mfatihceliik.chatapplication.ui.conversation.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chatFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_down" />
+        <argument
+            android:name="conversation"
+            app:argType="com.mfatihceliik.chatapplication.data.entity.remote.conversation.response.ConversationResponse" />
+    </fragment>
+    <fragment
+        android:id="@+id/membersFragment"
+        android:name="com.mfatihceliik.chatapplication.ui.createChat.member.MembersFragment"
+        android:label="MembersFragment"
+        tools:layout="@layout/members_fragment"/>
+    <dialog
+        android:id="@+id/createNewChatBottomSheetDialog"
+        android:name="com.mfatihceliik.chatapplication.ui.createChat.CreateNewChatBottomSheetDialog"
+        android:label="CreateNewChatBottomSheetDialog"
+        tools:layout="@layout/create_new_chat_bottomsheet_fragment"/>
+    <fragment
+        android:id="@+id/filePickerFragment"
+        android:name="com.mfatihceliik.chatapplication.ui.file.FilePickerFragment"
+        android:label="FilePickerFragment"
+        tools:layout="@layout/file_picker_fragment">
+        <action
+            android:id="@+id/action_filePickerFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popUpTo="@id/chatFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="gallery"
+            app:argType="com.mfatihceliik.chatapplication.data.entity.local.gallery.Gallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.mfatihceliik.chatapplication.ui.gallery.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_galleryFragment_to_filePickerFragment"
+            app:destination="@id/filePickerFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createConversationFragment"
+        android:name="com.mfatihceliik.chatapplication.ui.createChat.member.group.CreateConversationFragment"
+        android:label="CreateConversationFragment"
+        tools:layout="@layout/create_conversation_fragment" />
+
+</navigation>

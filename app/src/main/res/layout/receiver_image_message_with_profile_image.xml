@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mfatihceliik.chatapplication.ui.customViews.receiver.ReceiverProfileView
+        android:id="@+id/profileView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="@dimen/message_item_space_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mfatihceliik.chatapplication.ui.customViews.receiver.ReceiverImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/message_item_space_8dp"
+        app:layout_constraintStart_toEndOf="@+id/profileView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

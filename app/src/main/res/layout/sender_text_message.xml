@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/message_item_space_8dp"
+    android:gravity="end"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/speech_bubble_outgoing"
+        android:padding="@dimen/message_item_space_8dp">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:maxWidth="@dimen/text_message_max_width_200dp"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/text_message_text_size_14sp"
+            app:layout_constraintEnd_toStartOf="@+id/sendTime"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hi, how are you doing ?" />
+
+        <TextView
+            android:id="@+id/sendTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/text_message_time_11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="18:06" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:theme="@style/progressBar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/doubleTick"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/double_tick"
+            android:visibility="invisible"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
